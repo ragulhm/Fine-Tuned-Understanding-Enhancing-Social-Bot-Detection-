@@ -21,7 +21,7 @@ print("Using device:", device)
 # Load NEW dataset (fox_dataset.csv)
 # --------------------------------------------------
 df = pd.read_csv(
-    "/content/fox8_dataset.csv",
+    "/kaggle/input/fox8-dataset/fox8_bert_dataset .csv",
     sep=",",
     header=0,
     engine="python",
