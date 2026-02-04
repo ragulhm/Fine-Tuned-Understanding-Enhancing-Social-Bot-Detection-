@@ -73,7 +73,9 @@ X_train, X_test, y_train, y_test = train_test_split(
 # Transformer models (use ONE or ALL)
 # --------------------------------------------------
 MODEL_PATHS = {
-    "bert": "bert-base-uncased"
+    "bert": "bert-base-uncased",
+    "roberta": "roberta-base"
+
     # add others later if needed
 }
 
@@ -169,3 +171,4 @@ for model_key, model_path in MODEL_PATHS.items():
     torch.save(model.state_dict(), f"{model_key}_fox_model.pth")
 
 print("\n✅ Training on fox_dataset completed (1 epoch)")
+
