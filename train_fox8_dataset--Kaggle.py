@@ -17,9 +17,6 @@ print("Using device:", device)
 # --------------------------------------------------
 # Load NEW dataset (fox_dataset.csv)
 # --------------------------------------------------
-# --------------------------------------------------
-# Load NEW dataset (fox_dataset.csv)
-# --------------------------------------------------
 df = pd.read_csv(
     "/kaggle/input/fox8-dataset/fox8_bert_dataset .csv",
     sep=",",
@@ -171,4 +168,5 @@ for model_key, model_path in MODEL_PATHS.items():
     torch.save(model.state_dict(), f"{model_key}_fox_model.pth")
 
 print("\n✅ Training on fox_dataset completed (1 epoch)")
+
 
