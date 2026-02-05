@@ -92,15 +92,7 @@ def load_model(model_name, weight_path):
 
 # ==================================================
 # Performance metrics (FOX8 – from paper)
-# ==================================================
-PERFORMANCE_TABLE = pd.DataFrame({
-    "Model": ["BERT", "RoBERTa", "DistilBERT", "XLM-RoBERTa"],
-    "Accuracy":  [0.8750, 0.8762, 0.9307, 0.8743],
-    "Precision": [0.7846, 0.8439, 0.9253, 0.7846],
-    "Recall":    [0.8732, 0.7846, 0.9281, 0.7588],
-    "F1-score":  [0.8127, 0.8566, 0.9298, 0.8277],
-    "AUC":       [0.8683, 0.8873, 0.9740, 0.8568]
-})
+
 
 # ==================================================
 # User input
@@ -167,16 +159,4 @@ if st.button("🚀 Run All Models (FOX8)"):
 
         st.table(pd.DataFrame(results))
 
-        # ---------------- Performance Evaluation ----------------
-        st.subheader("📊 Performance Evaluation (FOX8 Test Set)")
-        st.caption(
-            "Offline evaluation metrics obtained after fine-tuning on fox8-23 dataset"
-        )
-
-        st.dataframe(
-            PERFORMANCE_TABLE.style.highlight_max(axis=0, color="lightgreen"),
-            use_container_width=True
-        )
-
-        progress.progress(100)
-        st.success("✅ FOX8 inference & evaluation completed successfully")
+       
